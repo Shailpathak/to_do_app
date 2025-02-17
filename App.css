@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #765b88;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  width: 150%; /* Slightly increased width */
+  max-width: 1100px; /* Increased max width */
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0d7079;
+}
+
+/* Input Section */
+.input-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input Row - Date, Time & Add Button on the Same Line */
+.input-row {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.date-input, .time-input {
+  flex: 1; /* Allows date and time to take equal space */
+  padding: 6px; /* Reduced padding to decrease height */
+  margin-right: 10px; /* Adds space between date and time inputs */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Reduced border-radius for a compact look */
+  font-size: 14px;
+  height: 15px; /* Explicitly set height to make them shorter */
+}
+
+/* Last input (time-input) should not have extra margin */
+.time-input {
+  margin-right: 0;
+}
+
+
+.add-btn {
+  padding: 4px 8px;
+  border: none;
+  background: #133a64;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap; /* Ensures text doesn't wrap */
+}
+
+.add-btn:hover {
+  background: #0056b3;
+}
+
+/* Todo List */
+.todo-list {
+  margin-top: 15px;
+}
+
+.todo-item {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+
+.todo-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.todo-checkbox {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.todo-text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action-btn:hover {
+  transform: scale(1.2);
+}
+
+.delete {
+  color: red;
+}
+
+.edit {
+  color: #007bff;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  margin-top: 20px;
+}
